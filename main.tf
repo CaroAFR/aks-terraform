@@ -12,11 +12,13 @@ provider "azurerm" {
   features {}
 }
 
+# Create resource group
 resource "azurerm_resource_group" "demo-kubernetes" {
   name     = var.rg_name
   location = var.rg_location
 }
 
+# Create AKS cluster
 resource "azurerm_kubernetes_cluster" "AKS-demo" {
   name                = "AKS-Demo"
   location            = azurerm_resource_group.demo-kubernetes.location
