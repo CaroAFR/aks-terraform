@@ -40,6 +40,10 @@ mv ./kubectl /usr/local/bin/kubectl
 # grab AKS config
 az aks get-credentials -n aks-getting-started -g aks-getting-started
 ```
+You can now interact with the cluster directly from the command line using kubectl command, like:
+```
+kubectl get pods --all-namespaces
+```
 
 ## Clean up
 
