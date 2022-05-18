@@ -18,6 +18,7 @@ az login
 
 ```
 ssh-keygen -t rsa -b 4096 -N "YourSecret" -C "your_email@example.com" -q -f  ~/.ssh/id_rsa
+
 #Set env var with publick key to be used by terraform
 SSH_KEY=$(cat ~/.ssh/id_rsa.pub)
 ```
