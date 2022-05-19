@@ -1,5 +1,7 @@
 # Getting Started with AKS
 
+The first thing that you need to do is install AZ CLI and login to your azure account. You can do it with the following commands.
+
 ## Azure CLI
 
 ```
