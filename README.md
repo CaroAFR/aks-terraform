@@ -16,6 +16,8 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 az login
 ```
 
+The next step is to generate a SSH key to set to the linux profile
+
 ## Generate SSH key
 
 ```
