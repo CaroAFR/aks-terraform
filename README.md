@@ -72,9 +72,17 @@ choco install kubernetes-cli
 ```
 az aks get-credentials --resource-group demo-kubernetes --name AKS-Demo
 ```
-You can now interact with the cluster directly from the command line using kubectl command, like:
+You can now interact with the cluster directly from the command line using kubectl command
 ```
+#Deploy the app
+kubectl apply -f app.yml
+
+#Get pods
 kubectl get pods --all-namespaces
+
+#Get the external IP for the application
+kubectl get services
+
 ```
 
 ## Clean up
