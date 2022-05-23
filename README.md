@@ -36,6 +36,7 @@ ssh-keygen -t rsa -b 4096 -N "YourSecret" -C "your_email@example.com" -q -f  ~/.
 SSH_KEY=$(cat ~/.ssh/id_rsa.pub)
 ```
 ## Generate SSH key PowerShell
+Run this command in the user folder or use the path to the folder. Make sure the folder .ssh is already created.
 ```
 ssh-keygen -t rsa -b 4096 -N "YourSecret" -C "your_email@example.com" -q -f  .ssh/id_rsa
 
