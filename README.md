@@ -68,7 +68,7 @@ Run Powershell as Administrator
 choco install kubernetes-cli
 ```
 
-# grab AKS config
+## Grab AKS config
 ```
 az aks get-credentials --resource-group demo-kubernetes --name AKS-Demo
 ```
