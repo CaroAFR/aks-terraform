@@ -69,8 +69,9 @@ choco install terraform
 ```
 
 ## Deploy with terraform
-
+Enter the folder of the cloned repo and deploy the app
 ```
+cd aks-terraform
 terraform init
 terraform plan -var ssh_key="$SSH_KEY"
 terraform apply -var ssh_key="$SSH_KEY"
