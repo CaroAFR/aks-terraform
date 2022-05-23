@@ -55,14 +55,21 @@ terraform apply -var ssh_key="$SSH_KEY"
 ```
 
 ## Check the deployment
-
+# Get kubectl Ubuntu
 ```
-# Get kubectl
 curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
 chmod +x ./kubectl
 mv ./kubectl /usr/local/bin/kubectl
+```
+# Get kubectl Windows
+Run Powershell as Administrator
+```
+#Using chocolatey 
+choco install kubernetes-cli
+```
 
 # grab AKS config
+```
 az aks get-credentials --resource-group demo-kubernetes --name AKS-Demo
 ```
 You can now interact with the cluster directly from the command line using kubectl command, like:
