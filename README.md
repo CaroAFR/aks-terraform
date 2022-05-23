@@ -44,7 +44,29 @@ ssh-keygen -t rsa -b 4096 -N "YourSecret" -C "your_email@example.com" -q -f  .ss
 Set-Variable -Name SSH_KEY -Value (cat .ssh/id_rsa.pub)
 ```
 
+## Get Terraform UBUNTU
+```
+#Ensure that your system is up to date, and you have the gnupg, software-properties-common, and curl packages installed.
+sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl
 
+#Add the HashiCorp GPG key
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+
+#Add the official HashiCorp Linux repository.
+sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+
+#Update to add the repository, and install the Terraform CLI
+sudo apt-get update && sudo apt-get install terraform
+```
+
+## Get Terraform WINDOWS
+```
+#Get Chocolatey to install Terraform. Run Powershell as administrator
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+#Install terraform with chocolatey
+choco install terraform
+```
 
 ## Deploy with terraform
 
