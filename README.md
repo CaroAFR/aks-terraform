@@ -27,7 +27,7 @@ az login
 
 The next step is to generate a SSH key to set to the linux profile
 
-## Generate SSH key
+## Generate SSH key UBUNTU
 
 ```
 ssh-keygen -t rsa -b 4096 -N "YourSecret" -C "your_email@example.com" -q -f  ~/.ssh/id_rsa
@@ -35,6 +35,15 @@ ssh-keygen -t rsa -b 4096 -N "YourSecret" -C "your_email@example.com" -q -f  ~/.
 #Set env var with public key to be used by terraform
 SSH_KEY=$(cat ~/.ssh/id_rsa.pub)
 ```
+## Generate SSH key PowerShell
+```
+ssh-keygen -t rsa -b 4096 -N "YourSecret" -C "your_email@example.com" -q -f  .ssh/id_rsa
+
+#Set env var with public key to be used by terraform
+Set-Variable -Name SSH_KEY -Value (cat .ssh/id_rsa.pub)
+```
+
+
 
 ## Deploy with terraform
 
