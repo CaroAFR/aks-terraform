@@ -2,12 +2,21 @@
 
 The first thing that you need to do is install AZ CLI and login to your azure account. You can do it with the following commands.
 
-## Azure CLI
+## Azure CLI Ubuntu
 
 ```
 #Install Azure CLI
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 ```
+
+## Azure CLI Windows
+
+Open Powershell as Administrator and run the following command
+```
+#Install Azure CLI
+$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://aka.ms/installazurecliwindows -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; rm .\AzureCLI.msi
+```
+
 
 ## Login to azure
 
